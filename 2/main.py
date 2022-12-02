@@ -10,11 +10,11 @@ with open("input.txt") as f:
         strat = strat.replace("C","Z")
 
         split = strat.split(" ")
-        win = beats[split[0]] == split[1]
-        lose = beats[split[1]] == split[0]
-        draw = split[0] == split[1]
+        win = beats[split[1]] == split[0]
+        lose = beats[split[0]] == split[1]
+        draw = split[1] == split[0]
         
-        rscore = scores[split[0]]
+        rscore = scores[split[1]]
         if win == True:
             rscore += 6
         elif draw == True:
